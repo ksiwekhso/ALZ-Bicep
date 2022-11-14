@@ -37,12 +37,7 @@ param parTenantId string = tenant().tenantId
 resource resSubscription 'Microsoft.Subscription/aliases@2021-10-01' = {
   name: parSubscriptionName
   properties: {
-    additionalProperties: {
-      tags: parTags
-      managementGroupId: empty(parManagementGroupId) ? json('null') : managementGroup(parManagementGroupId)
-      subscriptionOwnerId: empty(parSubscriptionOwnerId) ? json('null') : parSubscriptionOwnerId
-      subscriptionTenantId: parTenantId
-    }
+    additionalProperties: { tags: parTags, managementGroupId: empty(parManagementGroupId) ? json('null') : managementGroup(parManagementGroupId), subscriptionOwnerId: empty(parSubscriptionOwnerId) ? json('null') : parSubscriptionOwnerId, subscriptionTenantId: parTenantId }
     displayName: parSubscriptionName
     billingScope: parSubscriptionBillingScope
     workload: parSubscriptionOfferType
