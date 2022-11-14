@@ -3,14 +3,14 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parLocation": {
-      "value": "eastus"
+      "value": "westeurope"
     },
     "parAcrSku": {
       "value": "Basic"
     },
     "parTags":{
       "value":{
-        "Environment": "POC"
+        "Environment": "KStest"
       }
     }
   }
