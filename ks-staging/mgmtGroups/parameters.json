@@ -1,0 +1,43 @@
+{
+
+  "requireAuthorizationForGroupCreation": true,
+
+  "tier1": [
+      {
+          "name": "300",
+          "displayName": "LA Workloads",
+          "parent": "100"
+      },
+      {
+          "name": "400",
+          "displayName": "EU Workloads",
+          "parent": "100"
+      }
+  ],
+  "tier2": [
+      {
+          "name": "301",
+          "displayName": "LA Workloads Prod",
+          "parent": "300"
+      },
+      {
+          "name": "302",
+          "displayName": "LA Workloads Non-Prod",
+          "parent": "300"
+      },
+      {
+          "name": "401",
+          "displayName": "EU Workloads Prod",
+          "parent": "400"
+      },
+      {
+          "name": "402",
+          "displayName": "EU Workloads Non-Prod",
+          "parent": "400"
+      }
+  ],
+  "tier3": [],
+  "tier4": [],
+  "tier5": [],
+  "tier6": []
+}

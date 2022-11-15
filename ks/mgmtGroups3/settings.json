@@ -1,0 +1,80 @@
+{
+  "managementGroupPrefix": "MYC",
+  "managementGroupSuffix": "mg",
+  "defaultManagementGroup": "newsubscriptions",
+  "requireAuthorizationForGroupCreation": true,
+  "tier1": [
+      {
+          "name": "root",
+          "displayName": "My Company",
+          "parent": ""
+      }
+  ],
+  "tier2": [
+      {
+          "name": "platform",
+          "displayName": "Platform",
+          "parent": "root"
+      },
+      {
+          "name": "landingzones",
+          "displayName": "Landing Zones",
+          "parent": "root"
+      },
+      {
+          "name": "sandboxes",
+          "displayName": "Sandboxes",
+          "parent": "root"
+      },
+      {
+          "name": "decommissioned",
+          "displayName": "Decommissioned",
+          "parent": "root"
+      },
+      {
+          "name": "legacy",
+          "displayName": "Legacy Resources",
+          "parent": "root"
+      },
+      {
+          "name": "newsubscriptions",
+          "displayName": "New Subscriptions",
+          "parent": "root"
+      }
+  ],
+  "tier3": [
+      {
+          "name": "identity",
+          "displayName": "Identity",
+          "parent": "platform"
+      },
+      {
+          "name": "management",
+          "displayName": "Management",
+          "parent": "platform"
+      },
+      {
+          "name": "connectivity",
+          "displayName": "Connectivity",
+          "parent": "platform"
+      },
+      {
+          "name": "corp",
+          "displayName": "Corp",
+          "parent": "landingzones"
+      },
+      {
+          "name": "online",
+          "displayName": "Online",
+          "parent": "landingzones"
+      },
+      {
+          "name": "dmz",
+          "displayName": "DMZ",
+          "parent": "landingzones"
+      }
+  ],
+  "tier4": [],
+  "tier5": [],
+  "tier6": []
+}
