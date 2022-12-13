@@ -15,18 +15,7 @@ Module deploys the following resources:
 
 ## Parameters
 
-The module requires the following inputs:
-
- | Parameter                        | Type   | Default | Description                                                     | Requirement                                  | Example         |
- | -------------------------------- | ------ | ------- | --------------------------------------------------------------- | -------------------------------------------- | --------------- |
- | parDestinationVirtualNetworkId   | string | None    | ID of the Destination Virtual Network                           | Valid Virtual Network ID                     |
- | parSourceVirtualNetworkName      | string | None    | Name of Source Virtual Network                                  | Valid Azure Region                           | alz-spk-eastus2 |
- | parDestinationVirtualNetworkName | string | None    | Virtual Network Name of the destination/target Virtual Network. | 2-64 char, letters, numbers, and underscores | alz-hub-eastus2 |
- | parAllowVirtualNetworkAccess     | bool   | true    | Switch to enable virtual Network Access                         | None                                         | true            |
- | parAllowForwardedTraffic         | bool   | true    | Switch to enable Forwarded Traffic                              | None                                         | true            |
- | parAllowGatewayTransit           | bool   | false   | Switch to enable Gateway Transit                                | None                                         | false           |
- | parUseRemoteGateways             | bool   | false   | Switch to enable Remote Gateway                                 | None                                         | false           |
- | parTelemetryOptOut               | bool   | false   | Set Parameter to true to Opt-out of deployment telemetry        | None                                         | false           |
+- [Parameters for Azure Commercial Cloud](generateddocs/vnetPeering.bicep.md)
 
 ## Outputs
 
@@ -111,7 +100,7 @@ $TopLevelMGPrefix = "alz"
 
 # Create Resource Group - optional when using an existing resource group
 New-AzResourceGroup `
-  -Name $ResourceGroupName `
+  -Name $inputObject.ResourceGroupName `
   -Location eastus
 
 # Parameters necessary for deployment
@@ -134,7 +123,7 @@ Select-AzSubscription -SubscriptionId $LandingZoneSubscriptionId
 
 # Create Resource Group - optional when using an existing resource group
 New-AzResourceGroup `
-  -Name $ResourceGroupName `
+  -Name $inputObject.ResourceGroupName `
   -Location chinaeast2
 
 # Set the top level MG Prefix in accordance to your environment. This example assumes default 'alz'.
